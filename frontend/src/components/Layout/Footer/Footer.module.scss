@@ -1,0 +1,47 @@
+@import "../../../styles/constants.scss";
+
+.footer {
+  font-size: 0.8em;
+  color: $color-primary-lightest;
+  background-color: $color-primary-darkest;
+  opacity: 0.8;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $gap;
+}
+
+.nav {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+
+  &_icon {
+    width: 25px;
+    height: 25px;
+    display: none;
+    @media (max-width: 450px) {
+      display: block;
+    }
+  }
+
+  &_text {
+    @media (max-width: 450px) {
+      display: none;
+    }
+  }
+
+  &_cv {
+    @media (max-width: 450px) {
+      &>span {
+        display: none;
+      }
+      &::after {
+        content: "CV";
+      }
+    }
+  }
+}

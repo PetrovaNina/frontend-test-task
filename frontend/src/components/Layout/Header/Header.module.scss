@@ -1,0 +1,30 @@
+@import "../../../styles/constants.scss";
+
+.header {
+  color: $color-primary-lightest;
+  background-color: $color-primary-darkest;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $gap;
+}
+
+.nav {
+  font-weight: bolder;
+}
+
+.logo,
+.nav {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+
+  &_text {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
