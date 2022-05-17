@@ -1,10 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
+import { forwardRef } from "react";
 import { Container } from "../";
 import s from "./Header.module.scss";
 
-export const Header = () => {
+export const Header = forwardRef((props, ref) => {
   return (
-    <header className={s.header}>
+    <header className={s.header} ref={ref}>
       <Container className={s.container}>
         <Link to="/" className={s.logo}>
           <img src="medicine.png" height="30px" width="30px"/>
@@ -17,4 +18,4 @@ export const Header = () => {
       </Container>
     </header>
   );
-};
+});

@@ -1,0 +1,10 @@
+@import "../../styles/constants.scss";
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.main {
+  flex-grow: 1;
+}

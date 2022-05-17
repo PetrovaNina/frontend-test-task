@@ -12,6 +12,10 @@
   justify-content: space-between;
   align-items: center;
   gap: $gap;
+
+  @media (max-width: 767px) {
+    max-width: $max-content-width;
+  }
 }
 
 .nav {
@@ -36,7 +40,7 @@
 
   &_cv {
     @media (max-width: 450px) {
-      &>span {
+      & > span {
         display: none;
       }
       &::after {
