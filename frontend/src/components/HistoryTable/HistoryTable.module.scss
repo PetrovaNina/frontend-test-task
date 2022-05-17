@@ -1,0 +1,65 @@
+@import "../../styles/constants.scss";
+
+.table {
+  min-width: 100%;
+  font-weight: 600;
+
+  thead {
+    text-align: left;
+    font-size: 0.85em;
+    color: $color-primary-gray-light;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  & .row {
+    display: grid;
+    padding: 10px 0;
+    min-height: 2.5em;
+    line-height: 1.3em;
+    align-content: center;
+    grid-template-columns:
+      minmax(160px, 1.2fr)
+      minmax(150px, 4.4fr)
+      minmax(100px, 1.17fr)
+      minmax(100px, 1.05fr);
+
+    @media (max-width: 767px) {
+      gap: 10px;
+      grid-template-columns:
+        minmax(100px, 4.2fr)
+        minmax(100px, 0.95fr);
+    }
+    border-bottom: 0.5px solid $color-primary-gray-light;
+
+    td {
+      font-size: 0.9em;
+      color: $color-primary-gray;
+
+      .colored {
+        width: min-content;
+        padding: 0 5px;
+        background-color: aqua;
+        border-radius: 5px;
+        border: 0.5px solid #808080;
+      }
+
+      @media (max-width: 767px) {
+        &.pre_last,
+        &.last {
+          text-align: right;
+        }
+        &.second {
+          grid-column: 1;
+          grid-row: 2;
+        }
+        &.last {
+          grid-column: 2;
+          grid-row: 1;
+        }
+      }
+    }
+  }
+}
